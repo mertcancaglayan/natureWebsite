@@ -12,6 +12,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	background-color: #0a2209;
+	overflow: hidden;
 }
 
 #navbar {
@@ -61,6 +62,12 @@ body {
 
 #mainPage .container article {
 	display: none;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	border-radius: 0;
 }
 
 .carouselContainer {
@@ -71,7 +78,7 @@ body {
 	right: 0;
 	width: 25%;
 	height: 100%;
-	background-color: rgb(15, 37, 10);
+	background: transparent;
 }
 
 .buttonContainer {
@@ -98,13 +105,11 @@ body {
 
 .carousel #firstItems {
 	flex-direction: column;
-	background-color: red;
 	transform: translate(-50%, -50%);
 }
 
 .carousel #secondItems {
 	flex-direction: column;
-	background-color: rgb(44, 143, 5);
 	transform: translate(-50%, 150%);
 }
 
@@ -117,20 +122,25 @@ body {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	gap: 10px;
 }
 
-.carousel article .imgContainer {
+#firstItems .imgContainer,
+#secondItems .imgContainer {
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 40%;
+	margin: 5px 0;
+	width: 50%;
 	height: 100%;
+	overflow: hidden;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+.carousel article .imgContainer:hover {
+	transform: scale(1.3);
 }
 
 .carousel article .imgContainer img {
 	width: 100%;
-	max-height: 100%;
 }
 
 .active {
@@ -143,10 +153,40 @@ body {
 	bottom: 0;
 	width: 100%;
 	border-radius: 0;
+	animation: activeAnimation 0.5s forwards;
+}
+
+@keyframes activeAnimation {
+	0% {
+		opacity: 0;
+
+		transform: translateX(100%) scale(0);
+	}
+	100% {
+		opacity: 1;
+		
+		transform: translateX(0) scale(1);
+	}
 }
 
 .active img {
 	width: 75%;
+}
+
+.deactive {
+	z-index: 999;
+	animation: deactiveAnimation 0.5s forwards;
+}
+
+@keyframes deactiveAnimation {
+	0% {
+		opacity: 1;
+		transform: translateX(0%) scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: translateX(-90%) scale(0);
+	}
 }
 
 .active .content {
