@@ -1,3 +1,13 @@
+:root {
+	--background-gradient: linear-gradient(90deg, rgba(2, 51, 19, 1) 0%, rgba(4, 40, 25, 1) 87%);
+	--navbar-background-color: rgba(0, 0, 0, 0.5);
+	--active-img-shadow: 12px 0px 31px 8px rgba(0, 0, 0, 0.54);
+	--navbar-button-background:  #174926;
+	--navbar-button-background-hover: #1f6833;
+	--carousel-shadow: inset -41px 0px 32px -24px rgba(0,0,0,0.75);
+	--carousel-button-color: #1f6833;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -10,9 +20,8 @@ body {
 	height: 100vh;
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	background-color: #0a2209;
 	overflow: hidden;
+	background: var(--background-gradient);
 }
 
 #navbar {
@@ -20,8 +29,7 @@ body {
 	align-items: center;
 	justify-content: space-between;
 	top: 0;
-	background-color: rgb(77, 72, 72);
-	opacity: 0.5;
+	background: var(--navbar-background-color);
 	width: 100%;
 	padding: 1.5rem 0;
 	height: 6.5rem;
@@ -46,18 +54,46 @@ body {
 	align-items: center;
 	justify-content: center;
 	width: 20%;
-	margin-right: 5rem;
+	gap: 1.5rem;
 }
 
-.navigationButtons p {
-	color: rgb(26, 65, 65);
-	background-color: aliceblue;
-	margin: 0 1rem;
-	padding: 0.5rem 1rem;
+.navigationButtons button {
+	appearance: none;
+	background: var(--navbar-button-background);
+	border: 1px solid rgba(27, 31, 35, 0.15);
+	border-radius: 6px;
+	box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+	color: #fff;
+	cursor: pointer;
+	font-family: system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 20px;
+	padding: 6px 16px;
+	text-align: center;
+	text-decoration: none;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	vertical-align: middle;
+	white-space: nowrap;
 }
+
+.navigationButtons button:focus:not(:focus-visible):not(.focus-visible) {
+	box-shadow: none;
+	outline: none;
+}
+
+.navigationButtons button:hover {
+	background: var(--navbar-button-background-hover);
+}
+
 
 #mainPage {
 	display: flex;
+	justify-self: start;
+	width: 80%;
+	height: 100%;
 }
 
 #mainPage .container article {
@@ -66,7 +102,6 @@ body {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	width: 100%;
 	border-radius: 0;
 }
 
@@ -76,9 +111,12 @@ body {
 	align-items: center;
 	bottom: 0;
 	right: 0;
-	width: 25%;
+	width: 20%;
 	height: 100%;
 	background: transparent;
+	-webkit-box-shadow: var(--carousel-shadow);
+	-moz-box-shadow: var(--carousel-shadow);
+	box-shadow: var(--carousel-shadow);
 }
 
 .buttonContainer {
@@ -89,9 +127,22 @@ body {
 	position: absolute;
 	bottom: 5%;
 	right: 5%;
-	background-color: #000;
 	width: 10%;
 	z-index: 1;
+}
+
+.buttonContainer #prevBtn,
+#nextBtn {
+	font-size: 2rem;
+	color:var(--carousel-button-color) ;
+	background:transparent;
+	outline: none;
+	border: none;
+}
+
+.buttonContainer #prevBtn:hover,
+#nextBtn:hover {
+	color:aliceblue ;
 }
 
 .carousel {
@@ -128,15 +179,18 @@ body {
 #secondItems .imgContainer {
 	display: flex;
 	margin: 5px 0;
-	width: 50%;
+	width: 70%;
 	height: 100%;
 	overflow: hidden;
 	transition: 0.3s;
 	cursor: pointer;
+	margin: 0.5rem 0;
+	outline: 1px solid aliceblue;
+	border-radius: 5px;
 }
 
 .carousel article .imgContainer:hover {
-	transform: scale(1.3);
+	transform: scale(1.1);
 }
 
 .carousel article .imgContainer img {
@@ -151,7 +205,7 @@ body {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	width: 100%;
+	width: 80%;
 	border-radius: 0;
 	animation: activeAnimation 0.5s forwards;
 }
@@ -164,13 +218,16 @@ body {
 	}
 	100% {
 		opacity: 1;
-		
+
 		transform: translateX(0) scale(1);
 	}
 }
 
 .active img {
-	width: 75%;
+	width: 100%;
+	-webkit-box-shadow: var(--active-img-shadow);
+	-moz-box-shadow: var(--active-img-shadow);
+	box-shadow: var(--active-img-shadow);
 }
 
 .deactive {
