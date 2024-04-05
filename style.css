@@ -1,21 +1,21 @@
 :root {
-	--navbar-background-color: rgba(0, 0, 0, 0.5);
 	--active-img-shadow: 12px 0px 31px 8px rgba(0, 0, 0, 0.54);
 	--carousel-shadow: inset -41px 0px 32px -24px rgba(0, 0, 0, 0.75);
 	--earth-background-gradient: linear-gradient(90deg, rgba(2, 51, 19, 1) 0%, rgba(4, 40, 25, 1) 87%);
 	--earth-navbar-button-background: #174926;
 	--earth-navbar-button-background-hover: #1f6833;
 	--earth-carousel-button-color: #1f6833;
+	--earth-btn-text-color: #e7e7e9;
 	--ocean-background-gradient: url(assets/img/ocean-background.png);
 	--ocean-navbar-button-background: #aad6ec;
 	--ocean-navbar-button-background-hover: #81b1ce;
 	--ocean-carousel-button-color: #81b1ce;
 	--ocean-btn-text-color: #0f1056;
 	--space-background-gradient: linear-gradient(90deg, rgba(9,9,9,1) 0%, rgba(5,4,13,1) 8%, rgba(29,26,34,1) 84%, rgba(50,48,49,1) 100%);
-	--space-navbar-button-background: #a09d9d;
-	--space-navbar-button-background-hover: #bbbbbb;
+	--space-navbar-button-background: #5e5e5e;
+	--space-navbar-button-background-hover: #8497a0;
 	--space-carousel-button-color: #969696;
-	--space-btn-text-color: #0f1056;
+	--space-btn-text-color: #ffffff;
 }
 
 * {
@@ -31,7 +31,7 @@ body {
 	display: flex;
 	align-items: center;
 	overflow: hidden;
-	background: var(--space-background-gradient);
+	background: var(--earth-background-gradient);
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -71,11 +71,11 @@ body {
 
 .navigationButtons button {
 	appearance: none;
-	background: var(--space-navbar-button-background);
+	background: var(--earth-navbar-button-background);
 	border: 1px solid rgba(27, 31, 35, 0.15);
 	border-radius: 6px;
 	box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
-	color: var(--space-btn-text-color);
+	color: var(--earth-btn-text-color);
 	cursor: pointer;
 	font-family: system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 	font-size: 14px;
@@ -97,7 +97,7 @@ body {
 }
 
 .navigationButtons button:hover {
-	background: var(--space-navbar-button-background-hover);
+	background: var(--earth-navbar-button-background-hover);
 }
 
 #mainPage {
@@ -144,11 +144,11 @@ body {
 
 #dropBtn {
 	appearance: none;
-	background: var(--space-navbar-button-background);
+	background: var(--earth-navbar-button-background);
 	border: 1px solid rgba(27, 31, 35, 0.15);
 	border-radius: 6px;
 	box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
-	color: var(--space-btn-text-color);
+	color: var(--earth-btn-text-color);
 	cursor: pointer;
 	font-family: system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 	font-size: 14px;
@@ -165,7 +165,7 @@ body {
 }
 
 #dropBtn:hover {
-	background: var(--space-navbar-button-background-hover);
+	background: var(--earth-navbar-button-background-hover);
 }
 
 #earthCategory {
@@ -333,7 +333,7 @@ body {
 .buttonContainer #prevBtn,
 #nextBtn {
 	font-size: 2rem;
-	color: var(--space-carousel-button-color);
+	color: var(--earth-carousel-button-color);
 	background: transparent;
 	outline: none;
 	border: none;
