@@ -4,6 +4,7 @@ const carousel = document.querySelector(".carousel");
 const images = document.querySelectorAll(".imgContainer");
 const contents = document.querySelectorAll(".mainContent");
 const aboutBtn = document.querySelector("#aboutBtn");
+const navigationButtons = document.querySelectorAll(".navigationButtons button");
 const dropdown = document.getElementById("myDropdown");
 const dropBtn = document.querySelector("#dropBtn");
 const oceanCategory = document.querySelector("#oceanCategory");
@@ -37,7 +38,58 @@ function toggleDropdown(isOnMenu) {
 	dropdown.style.display = isOnMenu ? "block" : "none";
 }
 
+fetch("./data.json")
+	.then((response) => response.json())
+	.then((jsonData) => {
+		console.log(jsonData);
+	})
+	.catch((error) => {
+		console.error("Error fetching JSON data:", error);
+	});
+
 let currentCategory = "earth";
+
+function changeTheme(newCategory) {
+	document.body.style.background = `var(--${newCategory}-background-gradient)`;
+	navigationButtons.forEach((btn) => {
+		btn.style.background = `var(--${newCategory}-navbar-button-background)`;
+		btn.style.color = `var(--${newCategory}-btn-text-color)`;
+
+		btn.addEventListener("mouseenter", () => {
+			btn.style.background = `var(--${newCategory}-navbar-button-background-hover)`;
+		});
+		btn.addEventListener("mouseleave", () => {
+			btn.style.background = `var(--${newCategory}-navbar-button-background)`;
+		});
+	});
+
+	dropBtn.style.background = `var(--${newCategory}-navbar-button-background)`;
+	dropBtn.style.color = `var(--${newCategory}-btn-text-color)`;
+
+	dropBtn.addEventListener("mouseenter", () => {
+		dropBtn.style.background = `var(--${newCategory}-navbar-button-background-hover)`;
+	});
+	dropBtn.addEventListener("mouseleave", () => {
+		dropBtn.style.background = `var(--${newCategory}-navbar-button-background)`;
+	});
+
+	nextBtn.addEventListener("mouseenter", () => {
+		nextBtn.style.color = `aliceblue`;
+	});
+	nextBtn.addEventListener("mouseleave", () => {
+		nextBtn.style.color = `var(--${newCategory}-carousel-button-color)`;
+	});
+
+	prevBtn.addEventListener("mouseenter", () => {
+		prevBtn.style.color = `aliceblue`;
+	});
+	prevBtn.addEventListener("mouseleave", () => {
+		prevBtn.style.color = `var(--${newCategory}-carousel-button-color)`;
+	});
+
+	nextBtn.style.color = `var(--${newCategory}-carousel-button-color)`;
+	prevBtn.style.color = `var(--${newCategory}-carousel-button-color)`;
+}
 
 function changeCategory(newCategory) {
 	if (newCategory === currentCategory) {
@@ -56,7 +108,7 @@ function changeCategory(newCategory) {
 		}
 	});
 
-	document.body.style.background = `var(--${newCategory}-background-gradient)`;
+	changeTheme(newCategory);
 
 	mainContentImages.forEach((image, index) => {
 		image.src = `assets/img/${newCategory}-img (${index + 1}).jpg`;
