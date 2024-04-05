@@ -1,11 +1,21 @@
 :root {
-	--background-gradient: linear-gradient(90deg, rgba(2, 51, 19, 1) 0%, rgba(4, 40, 25, 1) 87%);
 	--navbar-background-color: rgba(0, 0, 0, 0.5);
 	--active-img-shadow: 12px 0px 31px 8px rgba(0, 0, 0, 0.54);
-	--navbar-button-background:  #174926;
-	--navbar-button-background-hover: #1f6833;
-	--carousel-shadow: inset -41px 0px 32px -24px rgba(0,0,0,0.75);
-	--carousel-button-color: #1f6833;
+	--carousel-shadow: inset -41px 0px 32px -24px rgba(0, 0, 0, 0.75);
+	--earth-background-gradient: linear-gradient(90deg, rgba(2, 51, 19, 1) 0%, rgba(4, 40, 25, 1) 87%);
+	--earth-navbar-button-background: #174926;
+	--earth-navbar-button-background-hover: #1f6833;
+	--earth-carousel-button-color: #1f6833;
+	--ocean-background-gradient: url(assets/img/ocean-background.png);
+	--ocean-navbar-button-background: #aad6ec;
+	--ocean-navbar-button-background-hover: #81b1ce;
+	--ocean-carousel-button-color: #81b1ce;
+	--ocean-btn-text-color: #0f1056;
+	--space-background-gradient: linear-gradient(90deg, rgba(9,9,9,1) 0%, rgba(5,4,13,1) 8%, rgba(29,26,34,1) 84%, rgba(50,48,49,1) 100%);
+	--space-navbar-button-background: #a09d9d;
+	--space-navbar-button-background-hover: #bbbbbb;
+	--space-carousel-button-color: #969696;
+	--space-btn-text-color: #0f1056;
 }
 
 * {
@@ -21,7 +31,9 @@ body {
 	display: flex;
 	align-items: center;
 	overflow: hidden;
-	background: var(--background-gradient);
+	background: var(--space-background-gradient);
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 #navbar {
@@ -59,11 +71,11 @@ body {
 
 .navigationButtons button {
 	appearance: none;
-	background: var(--navbar-button-background);
+	background: var(--space-navbar-button-background);
 	border: 1px solid rgba(27, 31, 35, 0.15);
 	border-radius: 6px;
 	box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
-	color: #fff;
+	color: var(--space-btn-text-color);
 	cursor: pointer;
 	font-family: system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 	font-size: 14px;
@@ -85,9 +97,8 @@ body {
 }
 
 .navigationButtons button:hover {
-	background: var(--navbar-button-background-hover);
+	background: var(--space-navbar-button-background-hover);
 }
-
 
 #mainPage {
 	display: flex;
@@ -119,6 +130,194 @@ body {
 	box-shadow: var(--carousel-shadow);
 }
 
+.dropDownContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	position: absolute;
+	bottom: 7%;
+	left: 50%;
+	width: 10%;
+	z-index: 1;
+}
+
+#dropBtn {
+	appearance: none;
+	background: var(--space-navbar-button-background);
+	border: 1px solid rgba(27, 31, 35, 0.15);
+	border-radius: 6px;
+	box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+	color: var(--space-btn-text-color);
+	cursor: pointer;
+	font-family: system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 20px;
+	padding: 6px 16px;
+	text-align: center;
+	text-decoration: none;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+#dropBtn:hover {
+	background: var(--space-navbar-button-background-hover);
+}
+
+#earthCategory {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 8rem;
+	height: 3rem;
+	color: #ffffff;
+	text-shadow: #0c701d;
+	background-color: #094909;
+	background-image: url(assets/png/earthBtnBackground.jpg);
+	background-position: center;
+	background-size: cover;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	overflow: hidden;
+	padding: 0 20px;
+	box-shadow: 2px 19px 31px rgba(0, 0, 0, 0.2);
+	transition: 0.3s ease;
+}
+
+.dropDown #earthCategory:hover {
+	transform: scale(1.2);
+	z-index: 2;
+}
+
+#oceanCategory {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 8rem;
+	height: 3rem;
+	color: #ffffff;
+	text-shadow: #293944;
+	background-color: #19405a;
+	background-image: url(assets/png/seaBtnBackground.jpg);
+	background-position: center;
+	background-size: cover;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	overflow: hidden;
+	padding: 0 20px;
+	box-shadow: 2px 19px 31px rgba(0, 0, 0, 0.2);
+	transition: 0.3s ease;
+}
+
+.dropDown #oceanCategory:hover {
+	transform: scale(1.2);
+	z-index: 2;
+}
+
+#spaceCategory {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	width: 8rem;
+	height: 3rem;
+	background-color: #293944;
+	background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%),
+		radial-gradient(
+			66% 87% at 26% 20%,
+			rgba(255, 255, 255, 0.41) 0%,
+			rgba(255, 255, 255, 0) 69.79%,
+			rgba(255, 255, 255, 0) 100%
+		);
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+
+	overflow: hidden;
+	padding: 0 20px;
+	box-shadow: 2px 19px 31px rgba(0, 0, 0, 0.2);
+	transition: 0.3s ease;
+}
+
+#spaceCategory #title {
+	color: aliceblue;
+	position: absolute;
+	display: flex;
+}
+
+#spaceCategory .planet {
+	content: "";
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	top: 10px;
+	left: 10px;
+	background-color: rgb(224, 236, 224);
+	border-radius: 50%;
+	perspective: 1000px;
+	transform-style: preserve-3d;
+	box-shadow: inset rgb(211, 203, 177) -20px -20px 70px;
+}
+
+#spaceCategory .planet::before {
+	position: absolute;
+	content: "";
+	width: 25px;
+	height: 25px;
+	border: solid 6px rgb(187, 173, 173);
+	border-radius: 50%;
+	top: -30%;
+	left: -30%;
+	transform: rotate3d(0.8, 0.2, 0, 75deg);
+	box-sizing: border-box;
+}
+
+#spaceCategory .flex {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 0 20px;
+	height: 100%;
+	width: 100%;
+}
+
+.dropDown {
+	text-align: center;
+	display: none;
+	position: absolute;
+	min-width: 8rem;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+	animation: showDropDown 0.3s forwards;
+	bottom: 10%;
+}
+
+@keyframes showDropDown {
+	from {
+		opacity: 0;
+		bottom: 10%;
+	}
+	to {
+		opacity: 1;
+		bottom: 50%;
+		margin-bottom: 1rem;
+	}
+}
+
+.dropDown #spaceCategory:hover {
+	transform: scale(1.2);
+}
+
 .buttonContainer {
 	display: flex;
 	flex-direction: column;
@@ -134,15 +333,15 @@ body {
 .buttonContainer #prevBtn,
 #nextBtn {
 	font-size: 2rem;
-	color:var(--carousel-button-color) ;
-	background:transparent;
+	color: var(--space-carousel-button-color);
+	background: transparent;
 	outline: none;
 	border: none;
 }
 
 .buttonContainer #prevBtn:hover,
 #nextBtn:hover {
-	color:aliceblue ;
+	color: aliceblue;
 }
 
 .carousel {
