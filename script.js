@@ -41,17 +41,32 @@ function toggleDropdown(isOnMenu) {
 fetch("./data.json")
 	.then((response) => response.json())
 	.then((jsonData) => {
-		console.log(jsonData);
+		data = jsonData;
+		changeCategory("earth");
 	})
 	.catch((error) => {
 		console.error("Error fetching JSON data:", error);
 	});
-
-let currentCategory = "earth";
+let currentCategory = "";
 
 function changeTheme(newCategory) {
 	document.body.style.background = `var(--${newCategory}-background-gradient)`;
+
 	navigationButtons.forEach((btn) => {
+		btn.style.background = `var(--${newCategory}-navbar-button-background)`;
+		btn.style.color = `var(--${newCategory}-btn-text-color)`;
+
+		btn.addEventListener("mouseenter", () => {
+			btn.style.background = `var(--${newCategory}-navbar-button-background-hover)`;
+		});
+		btn.addEventListener("mouseleave", () => {
+			btn.style.background = `var(--${newCategory}-navbar-button-background)`;
+		});
+	});
+
+	const contentButtons = document.querySelectorAll(".contentButtons button");
+
+	contentButtons.forEach((btn) => {
 		btn.style.background = `var(--${newCategory}-navbar-button-background)`;
 		btn.style.color = `var(--${newCategory}-btn-text-color)`;
 
@@ -98,7 +113,17 @@ function changeCategory(newCategory) {
 	currentCategory = newCategory;
 
 	const mainContentImages = document.querySelectorAll(".mainContent img");
+	const mainContentText = document.querySelectorAll(".mainContent .content");
 	const articleImages = document.querySelectorAll(".imgContainer img");
+
+	data[newCategory].forEach((item, index) => {
+		mainContentText[index].innerHTML = `
+        <h3 class="articleTitle">${item.title}</h3>
+        <p>${item.description}</p>
+        <div class="contentButtons">
+            <button>Read More..</button>
+        </div>`;
+	});
 
 	contents.forEach((content, index) => {
 		if (index === 0) {

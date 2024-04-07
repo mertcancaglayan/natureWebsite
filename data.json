@@ -1,73 +1,99 @@
 {
 	"earth": [
 		{
+			"id": 1,
 			"title": "Rivers: Earth's Vital Veins",
-			"description": "Rivers, life's conduits, shape landscapes and sustain ecosystems. From serene streams to powerful currents, they provide resources and pathways for both nature and humanity. Yet, they also reveal the impacts of human actions, urging conservation efforts for their preservation."
+			"description": "Rivers, life's conduits, shape landscapes and sustain ecosystems. From serene streams to powerful currents, they provide resources and pathways for both nature and humanity."
 		},
 		{
+			"id": 2,
 			"title": "Plant Power",
 			"description": "Plants, nature's architects, sustain life, offer resources, and inspire awe with their resilience. They remind us of our interconnectedness with the natural world, urging us to cherish and protect our planet's delicate balance."
 		},
 		{
+			"id": 3,
 			"title": "Green Guardians",
 			"description": "Plants, the silent stewards of our planet, sustain ecosystems, provide oxygen, and offer invaluable resources. Their resilience and beauty serve as a reminder of nature's intricate balance, urging us to respect and preserve the biodiversity they support."
 		},
 		{
+			"id": 4,
 			"title": "Valleys: Nature's Haven",
 			"description": "Valleys, sculpted by nature's hand, harbor diverse life and offer essential resources. As cradles of biodiversity and tranquility, they beckon exploration and reverence for their enduring beauty."
 		},
 		{
+			"id": 5,
 			"title": "Lake and Mountain: Perfect Harmony",
 			"description": "Lakes and mountains unite, creating awe-inspiring vistas and havens for diverse life. This harmonious landscape invites exploration and recreation, celebrating the beauty of nature's balance."
 		},
 		{
+			"id": 6,
 			"title": "Majestic Mountains",
-			"description": "Mountains, nature's grandeur, inspire awe with their rugged beauty and towering heights. As symbols of resilience and adventure, they beckon explorers to ascend and discover the world anew."
+			"description": "Mountains, nature's grandeur, inspire awe with their rugged beauty and towering heights. They beckon explorers to ascend and discover the world anew."
 		}
 	],
 
 	"ocean": [
 		{
+			"id": 1,
 			"title": "Marine Majesty: Exploring the Deep Blue",
-			"description": "The ocean, Earth's expansive realm of mystery and majesty, invites explorers to delve into its depths and uncover its hidden treasures. From the sunlit shallows teeming with vibrant marine life to the mysterious abyssal plains where otherworldly creatures dwell, the ocean unfolds its secrets with every dive. As we venture beneath the waves, we discover a world of unparalleled beauty and complexity, inspiring awe and reverence for the wonders of the deep."
+			"description": "The ocean, Earth's expansive realm of mystery and majesty, invites explorers to delve into its depths and uncover its hidden treasures."
 		},
 		{
+			"id": 2,
 			"title": "Tidal Symphony: Nature's Ebb and Flow",
-			"description": "In the rhythm of the tides, nature orchestrates a symphony of ebb and flow that shapes the coastal landscapes and sustains marine ecosystems. From the gentle lapping of waves on sandy shores to the powerful surges of ocean currents, the tidal forces sculpt the coastline and nourish the rich biodiversity of coastal habitats. As we witness the dance of the tides, we gain a deeper appreciation for the interconnectedness of land and sea, and the vital role that the ocean plays in sustaining life on Earth."
+			"description": "In the rhythm of the tides, nature orchestrates a symphony of ebb and flow that shapes the coastal landscapes and sustains marine ecosystems."
 		},
 		{
+			"id": 3,
 			"title": "Blue Horizons: Endless Possibilities",
-			"description": "Stretching to the farthest reaches of the planet, the vast expanse of the ocean offers boundless opportunities for exploration and discovery. From the sun-dappled surface to the dark abyssal depths, the blue horizons beckon adventurers to embark on a journey of wonder and excitement. As we sail across the open seas, we encounter diverse marine life, breathtaking seascapes, and untold mysteries, inspiring a sense of awe and appreciation for the beauty and diversity of the ocean."
+			"description": "Stretching to the farthest reaches of the planet, the vast expanse of the ocean offers boundless opportunities for exploration and discovery. "
 		},
 		{
+			"id": 4,
 			"title": "Oceanic Harmony: Life in Balance",
-			"description": "Beneath the surface of the ocean, a delicate balance of life unfolds in a symphony of colors, shapes, and behaviors. From the intricate coral reefs teeming with biodiversity to the vast pelagic expanses inhabited by migratory giants, the ocean harbors an astonishing array of marine life. As we dive into the depths, we witness the interconnectedness of marine ecosystems and the vital role they play in sustaining life on Earth, inspiring a sense of awe and responsibility for the preservation of our ocean planet."
+			"description": "Beneath the surface of the ocean, a delicate balance of life unfolds in a symphony of colors, shapes, and behaviors. As we dive into the depths, we witness the interconnectedness of marine ecosystems and the vital role they play in sustaining life on Earth."
 		},
 		{
+			"id": 5,
 			"title": "Liquid Wilderness: Untamed Beauty",
-			"description": "The ocean, Earth's liquid wilderness, captivates the imagination with its untamed beauty and boundless expanse. From the rugged coastlines carved by crashing waves to the remote islands inhabited by unique flora and fauna, the marine realm offers a refuge for adventure and exploration. As we journey across the open ocean, we encounter awe-inspiring landscapes, diverse marine life, and pristine wilderness, inspiring a sense of wonder and reverence for the natural world."
+			"description": "The ocean, Earth's liquid wilderness, captivates the imagination with its untamed beauty and boundless expanse. As we journey across the open ocean."
+		},
+		{
+			"id": 6,
+			"title": "Coral Kingdoms: Underwater Paradises",
+			"description": "Beneath the waves, coral kingdoms flourish, creating vibrant underwater paradises teeming with life and color. From the bustling coral reefs to the serene seagrass meadows, these underwater ecosystems support a dazzling array of marine life."
 		}
 	],
 	"space": [
 		{
+			"id": 1,
 			"title": "Cosmic Odyssey: Exploring the Universe",
-			"description": "Space, the final frontier, beckons humanity to embark on a cosmic odyssey of exploration and discovery. From the majestic beauty of distant galaxies to the enigmatic depths of black holes, the universe unfolds its mysteries, inspiring awe and wonder. As we venture beyond the confines of our home planet, we glimpse the vastness of space and our place within it, igniting a quest for knowledge that spans the cosmos."
+			"description": "Space, the final frontier, beckons humanity to embark on a cosmic odyssey of exploration and discovery. Beauty of distant galaxies to the enigmatic depths of black holes, the universe unfolds its mysteries, inspiring awe and wonder."
 		},
 		{
+			"id": 2,
 			"title": "Stargazing Serenity: Embracing the Night Sky",
-			"description": "Under the canopy of the night sky, stargazers find solace and inspiration in the twinkling tapestry of stars. Each celestial body tells a story of cosmic evolution and celestial ballet, captivating our imaginations and connecting us to the vastness of the universe. Amidst the quietude of the cosmos, we ponder the mysteries of existence and find solace in the beauty of the cosmos, reminding us of our place in the grand tapestry of space and time."
+			"description": "Under the canopy of the night sky, stargazers find solace and inspiration in the twinkling tapestry of stars."
 		},
 		{
+			"id": 3,
 			"title": "Celestial Symphony: The Dance of Planets",
-			"description": "In the vast expanse of space, the planets of our solar system perform a celestial symphony, each with its own unique melody and choreography. From the graceful orbits of inner planets to the majestic rings of gas giants, the cosmic ballet unfolds with breathtaking beauty and precision. As we observe the dance of planets, we gain insight into the dynamics of our solar system and the forces that shape our cosmic neighborhood, inspiring wonder and awe at the wonders of the universe."
+			"description": "In the vast expanse of space, the planets of our solar system perform a celestial symphony, each with its own unique melody and choreography. "
 		},
 		{
+			"id": 4,
 			"title": "Beyond the Horizon: Exploring Exoplanets",
-			"description": "Beyond the familiar confines of our solar system lies a vast frontier of exoplanets, each with the potential to harbor alien worlds and extraterrestrial life. From rocky terrestrial planets to gas giants and icy moons, these distant worlds challenge our understanding of planetary science and astrobiology. As we probe the cosmos for signs of habitability and biosignatures, we embark on a journey of exploration and discovery that may one day lead us to the elusive answer to the question: are we alone in the universe?"
+			"description": "Beyond the familiar confines of our solar system lies a vast frontier of exoplanets, each with the potential to harbor alien worlds and extraterrestrial life."
 		},
 		{
+			"id": 5,
 			"title": "Cosmic Wonders: Unveiling the Mysteries",
-			"description": "Space, the ultimate playground of cosmic wonders, unveils its mysteries to those who dare to explore its depths. From the dazzling spectacle of supernovae to the eerie beauty of nebulae, the universe captivates our imagination with its awe-inspiring phenomena. As we peer into the cosmos with telescopes and space probes, we uncover the secrets of the universe and gain insight into the forces that shape the cosmos, igniting a sense of wonder and curiosity that fuels our quest for knowledge and understanding."
+			"description": "As we peer into the cosmos with telescopes and space probes, we uncover the secrets of the universe and gain insight into the forces that shape the cosmos, igniting a sense of wonder and curiosity that fuels our quest for knowledge and understanding."
+		},
+		{
+			"id": 6,
+			"title": "Galactic Guardians: Protecting Our Cosmic Home",
+			"description": "As stewards of the cosmos, humanity must take on the role of galactic guardians, safeguarding the vast expanse of space and its wonders for future generations. "
 		}
 	]
 }
